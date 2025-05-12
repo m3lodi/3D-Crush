@@ -11,6 +11,10 @@
 </head>
 
 <body>
+	 <!-- Audio tự động phát -->
+    <audio autoplay muted loop>
+  		<source src="music/setlove.mp3" type="audio/mpeg">
+	</audio>
 	<div class="title">
 		I Love You 💗
 	</div>
@@ -19,16 +23,16 @@
 		
 		<div class="outer-cube">
 			<div class="outer-top">
-				<img src="images/r3.JPG" />
+				<img src="images/r3.jpg" />
 			</div>
 			<div class="outer-bottom">
 				<img src="images/r2.jpg" />
 			</div>
 			<div class="outer-front">
-				<img src="images/r1.jpg" />
+				<img src="images/r6.jpg" />
 			</div>
 			<div class="outer-back">
-				<img src="images/r4.JPG" />
+				<img src="images/r4.jpg" />
 			</div>
 			<div class="outer-left">
 				<img src="images/r5.jpg" />
@@ -40,16 +44,16 @@
 		<!-- 内层立方体 -->
 		<div class="inner-cube">
 			<div class="inner-top">
-				<img src="images/r3.JPG" />
+				<img src="images/r3.jpg" />
 			</div>
 			<div class="inner-bottom">
 				<img src="images/r2.jpg" />
 			</div>
 			<div class="inner-front">
-				<img src="images/r1.jpg" />
+				<img src="images/r6.jpg" />
 			</div>
 			<div class="inner-back">
-				<img src="images/r4.JPG" />
+				<img src="images/r4.jpg" />
 			</div>
 			<div class="inner-left">
 				<img src="images/r5.jpg" />
@@ -69,7 +73,25 @@
 
 	<div id="copy">
 		<p class="text-center text-white text-sm">OG Creator</p>
-	  </div>
+	</div>
+
+	<script>
+ 		 window.addEventListener('DOMContentLoaded', function () {
+			const audio = document.getElementById('myAudio');
+			
+			// Gỡ mute và phát lại
+			audio.muted = false;
+			const playPromise = audio.play();
+
+			if (playPromise !== undefined) {
+			playPromise.then(() => {
+				// Tự động phát OK
+			}).catch((error) => {
+				console.log("Trình duyệt chặn autoplay:", error);
+			});
+			}
+		});
+	</script>
 </body>
 
 </html>
