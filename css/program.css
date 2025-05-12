@@ -152,28 +152,28 @@ body {
 .cube:hover .outer-top {
     right: -70px;
     bottom: -70px;
-    opacity: 0.95;
+    opacity: 1;
     transform: rotateX(90deg) translateZ(200px);
 }
 
 .cube:hover .outer-bottom {
     right: -70px;
     bottom: -70px;
-    opacity: 0.95;
+    opacity: 1;
     transform: rotateX(-90deg) translateZ(200px);
 }
 
 .cube:hover .outer-front {
     right: -70px;
     bottom: -70px;
-    opacity: 0.95;
+    opacity: 1;
     transform: rotateY(0deg) translateZ(200px);
 }
 
 .cube:hover .outer-back {
     right: -70px;
     bottom: -70px;
-    opacity: 0.95;
+    opacity: 1;
     transform: translateZ(-200px) rotateY(180deg);
 }
 
@@ -201,14 +201,14 @@ body {
 .cube:hover .outer-left {
     right: -70px;
     bottom: -70px;
-    opacity: 0.95;
+    opacity: 1;
     transform: rotateY(90deg) translateZ(200px);
 }
 
 .cube:hover .outer-right {
     right: -70px;
     bottom: -70px;
-    opacity: 0.95;
+    opacity: 1;
     transform: rotateY(-90deg) translateZ(200px);
 }
 
