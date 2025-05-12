@@ -76,21 +76,21 @@
 	</div>
 
 	<script>
- 		 window.addEventListener('DOMContentLoaded', function () {
-			const audio = document.getElementById('myAudio');
-			
-			// Gỡ mute và phát lại
-			audio.muted = false;
-			const playPromise = audio.play();
-
-			if (playPromise !== undefined) {
-			playPromise.then(() => {
-				// Tự động phát OK
-			}).catch((error) => {
-				console.log("Trình duyệt chặn autoplay:", error);
-			});
-			}
-		});
+	  window.addEventListener('DOMContentLoaded', function () {
+	    const audio = document.getElementById('myAudio');
+	    
+	    // Gỡ mute và phát lại
+	    audio.muted = false;
+	    const playPromise = audio.play();
+	
+	    if (playPromise !== undefined) {
+	      playPromise.then(() => {
+	        // OK
+	      }).catch((error) => {
+	        console.log("Trình duyệt chặn autoplay:", error);
+	      });
+	    }
+	  });
 	</script>
 </body>
 
