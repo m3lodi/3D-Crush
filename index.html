@@ -76,20 +76,14 @@
 	</div>
 
 	<script>
-	  window.addEventListener('DOMContentLoaded', function () {
-	    const audio = document.getElementById('myAudio');
-	    
-	    // Gỡ mute và phát lại
-	    audio.muted = false;
-	    const playPromise = audio.play();
+	  const audio = document.getElementById('myAudio');
 	
-	    if (playPromise !== undefined) {
-	      playPromise.then(() => {
-	        // OK
-	      }).catch((error) => {
-	        console.log("Trình duyệt chặn autoplay:", error);
-	      });
-	    }
+	  // Khi người dùng lần đầu click bất kỳ đâu, bật tiếng và play lại
+	  document.addEventListener('click', function () {
+	    audio.muted = false;
+	    audio.play().catch(e => {
+	      console.log("Trình duyệt chặn phát:", e);
+	    });
 	  });
 	</script>
 </body>
